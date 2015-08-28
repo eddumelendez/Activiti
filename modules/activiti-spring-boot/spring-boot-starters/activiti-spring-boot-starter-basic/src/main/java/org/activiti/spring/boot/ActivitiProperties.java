@@ -29,6 +29,8 @@ public class ActivitiProperties {
   private String restApiMapping = "/api/*";
   private String restApiServletName = "activitiRestApi";
   private boolean jpaEnabled = true; // true by default
+  private boolean tablePrefixIsSchema;
+  private String databaseTablePrefix;
 
   public boolean isJobExecutorActivate() {
     return jobExecutorActivate;
@@ -191,5 +193,20 @@ public class ActivitiProperties {
 	public void setMailServerUseTls(boolean mailServerUseTls) {
 		this.mailServerUseTls = mailServerUseTls;
 	}
-	
+
+	public boolean isTablePrefixIsSchema() {
+		return this.tablePrefixIsSchema;
+	}
+
+	public void setTablePrefixIsSchema(boolean tablePrefixIsSchema) {
+		this.tablePrefixIsSchema = tablePrefixIsSchema;
+	}
+
+	public String getDatabaseTablePrefix() {
+		return this.databaseTablePrefix;
+	}
+
+	public void setDatabaseTablePrefix(String databaseTablePrefix) {
+		this.databaseTablePrefix = databaseTablePrefix;
+	}
 }

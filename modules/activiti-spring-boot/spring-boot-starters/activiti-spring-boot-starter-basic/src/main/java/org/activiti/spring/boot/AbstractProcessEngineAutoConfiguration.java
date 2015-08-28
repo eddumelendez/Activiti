@@ -66,7 +66,7 @@ public abstract class AbstractProcessEngineAutoConfiguration
     conf.setDeploymentName(defaultText(activitiProperties.getDeploymentName(), conf.getDeploymentName()));
     conf.setDatabaseSchema(defaultText(activitiProperties.getDatabaseSchema(), conf.getDatabaseSchema()));
     conf.setDatabaseSchemaUpdate(defaultText(activitiProperties.getDatabaseSchemaUpdate(), conf.getDatabaseSchemaUpdate()));
-    
+
     conf.setJobExecutorActivate(activitiProperties.isJobExecutorActivate());
     conf.setAsyncExecutorEnabled(activitiProperties.isAsyncExecutorEnabled());
     conf.setAsyncExecutorActivate(activitiProperties.isAsyncExecutorActivate());
@@ -78,7 +78,8 @@ public abstract class AbstractProcessEngineAutoConfiguration
     conf.setMailServerDefaultFrom(activitiProperties.getMailServerDefaultFrom());
     conf.setMailServerUseSSL(activitiProperties.isMailServerUseSsl());
     conf.setMailServerUseTLS(activitiProperties.isMailServerUseTls());
-
+    conf.setTablePrefixIsSchema(activitiProperties.isTablePrefixIsSchema());
+    conf.setDatabaseTablePrefix(activitiProperties.getDatabaseTablePrefix());
 
     return conf;
   }
