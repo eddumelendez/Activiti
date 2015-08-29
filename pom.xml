@@ -515,17 +515,17 @@
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.2.3</version>
+        <version>2.4.5</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
-        <version>2.2.3</version>
+        <version>2.4.5</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>2.2.3</version>
+        <version>2.4.5</version>
       </dependency>
       <dependency>
         <groupId>org.apache.xmlgraphics</groupId>
@@ -838,7 +838,7 @@
       </modules>
     </profile>
     <profile>
-      <!-- 
+      <!--
            A profile dedicated to JDK 6.
            SpringBoot module is disabled as it needs JDK7+.
       -->

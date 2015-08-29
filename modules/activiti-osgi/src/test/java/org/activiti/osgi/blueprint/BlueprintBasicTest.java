@@ -52,9 +52,9 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 
 /**
- * Test class to do basic testing against an OSGi container using 
+ * Test class to do basic testing against an OSGi container using
  * the Activiti blueprint functionality
- * 
+ *
  * @author Tijs Rademakers
  */
 
@@ -64,16 +64,16 @@ public class BlueprintBasicTest {
 
   @Inject
   protected BundleContext ctx;
-  
+
   @Inject
   protected ProcessEngine processEngine;
-  
+
   @Inject
   protected RuntimeService runtimeService;
-  
+
   @Inject
   protected RepositoryService repositoryService;
-  
+
   @Inject
   protected HistoryService historyService;
 
@@ -86,9 +86,9 @@ public class BlueprintBasicTest {
         mavenBundle().groupId("org.activiti").artifactId("activiti-image-generator").version("5.18.1-SNAPSHOT"),
         mavenBundle().groupId("org.activiti").artifactId("activiti-engine").version("5.18.1-SNAPSHOT"),
         mavenBundle().groupId("org.apache.commons").artifactId("commons-lang3").version("3.3.2"),
-        mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.2.3"),
-        mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-databind").version("2.2.3"),
-        mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-annotations").version("2.2.3"),
+        mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.4.5"),
+        mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-databind").version("2.4.5"),
+        mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-annotations").version("2.4.5"),
         mavenBundle().groupId("log4j").artifactId("log4j").version("1.2.17"),
         mavenBundle().groupId("joda-time").artifactId("joda-time").version("2.6"),
         mavenBundle().groupId("com.h2database").artifactId("h2").version("1.3.176"),
@@ -101,15 +101,15 @@ public class BlueprintBasicTest {
         mavenBundle().groupId("org.apache.aries").artifactId("org.apache.aries.util").version("1.0.0"),
         mavenBundle().groupId("org.osgi").artifactId("org.osgi.enterprise").version("4.2.0"),
         bundle("reference:file:target/classes"));
-    
+
     Option[] optionArray = OptionUtils.combine(coreBundles, CoreOptions.junitBundles(),
-        provision(createTestBundleWithProcessEngineConfiguration(), 
-            createTestBundleWithProcessDefinition(), 
+        provision(createTestBundleWithProcessEngineConfiguration(),
+            createTestBundleWithProcessDefinition(),
             createTestBundleWithTask()));
     return optionArray;
   }
-  
-  
+
+
   protected InputStream createTestBundleWithProcessEngineConfiguration() {
     try {
       return TinyBundles
@@ -135,7 +135,7 @@ public class BlueprintBasicTest {
       return null;
     }
   }
-  
+
   protected InputStream createTestBundleWithTask() {
     try {
       return TinyBundles

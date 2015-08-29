@@ -86,9 +86,9 @@ Alternatively, if you don't want to use Maven you can include the jars in your p
 org.activiti:activiti-engine:jar:5.17.0
 +- org.activiti:activiti-bpmn-converter:jar:5.17.0:compile
 |  \- org.activiti:activiti-bpmn-model:jar:5.17.0:compile
-|     +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
-|     \- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
-|        \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+|     +- com.fasterxml.jackson.core:jackson-core:jar:2.4.5:compile
+|     \- com.fasterxml.jackson.core:jackson-databind:jar:2.4.5:compile
+|        \- com.fasterxml.jackson.core:jackson-annotations:jar:2.4.5:compile
 +- org.activiti:activiti-process-validation:jar:5.17.0:compile
 +- org.activiti:activiti-image-generator:jar:5.17.0:compile
 +- org.apache.commons:commons-email:jar:1.2:compile
